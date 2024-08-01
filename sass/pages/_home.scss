@@ -1,0 +1,37 @@
+.intro {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    padding-left: $padding-inline;
+    background-color: $color-grey-light-1;
+    overflow: hidden;
+    &__description {
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        padding-right: 20rem;
+    }
+    &__mockup {
+        position: relative;
+        z-index: 1000;
+        &--background {
+            position: absolute;
+            right: -30rem;
+            top: -17rem;
+        }
+        &--img {
+            position: absolute;
+            top: -8rem;
+            right: -8rem;
+
+        }
+    }
+    & button {
+        width: fit-content;
+    }
+}
+.why {
+    padding: $padding-inline;
+    background-color: $color-grey-light-2;
+
+}

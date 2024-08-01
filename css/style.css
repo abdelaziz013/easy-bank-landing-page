@@ -1,1 +1,104 @@
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  font-size: 1.125rem;
+}
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mb-small {
+  margin-bottom: 1.5rem;
+}
+
+.primary-header {
+  font-weight: 300;
+  color: hsl(233, 26%, 24%);
+}
+
+.text {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: hsl(233, 8%, 62%);
+}
+
+header {
+  padding-inline: 5rem;
+  margin-block: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+}
+header ul li {
+  color: hsl(233, 8%, 62%);
+  font-size: 1rem;
+}
+header ul li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  cursor: pointer;
+}
+
+.intro {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 5rem;
+  background-color: hsl(0, 0%, 98%);
+  overflow: hidden;
+}
+.intro__description {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  padding-right: 20rem;
+}
+.intro__mockup {
+  position: relative;
+  z-index: 1000;
+}
+.intro__mockup--background {
+  position: absolute;
+  right: -30rem;
+  top: -17rem;
+}
+.intro__mockup--img {
+  position: absolute;
+  top: -8rem;
+  right: -8rem;
+}
+.intro button {
+  width: fit-content;
+}
+
+.why {
+  padding: 5rem;
+  background-color: hsl(0, 0%, 98%);
+}

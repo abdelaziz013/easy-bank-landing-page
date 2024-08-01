@@ -1,0 +1,23 @@
+header{
+    padding-inline: $padding-inline;
+    margin-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+
+    & ul {
+        display: flex;
+        justify-content: space-around;
+        & li{
+            color:$color-grey-light-3;
+            font-size: 1rem;
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+
+        }
+    }
+}
