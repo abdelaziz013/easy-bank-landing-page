@@ -1,4 +1,4 @@
-header{
+header {
     padding-inline: $padding-inline;
     margin-block: 1rem;
     display: flex;
@@ -7,17 +7,44 @@ header{
     width: 100%;
     position: relative;
     z-index: 100;
+    @media only screen and (max-width: 600px) {
+        padding-inline: $padding-inline-mobile
+
+    }
 
     & ul {
         display: flex;
         justify-content: space-around;
-        & li{
-            color:$color-grey-light-3;
+
+        & li {
+            color: $color-grey-light-3;
             font-size: 1rem;
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 margin-right: 2rem;
             }
 
         }
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
+
+    & button {
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    & .mobile-menu{
+        cursor: pointer;
+        display: none;
+       
+        @media only screen and (max-width: 600px) {
+            display: block;
+        }
+
+    }
+
 }

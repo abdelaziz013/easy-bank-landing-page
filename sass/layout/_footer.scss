@@ -6,20 +6,43 @@
     padding-block: 3rem;
     align-items: center;
     background-color: $color-dark-blue;
-    color:$color-white
+    color:$color-white;
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr max-content 1fr;
+
+        padding-inline: $padding-inline-mobile;
+        padding-block: 1rem;
+    }
 }
 
 .footer {
 
+
+
     &__logo-social{
         display: flex;
         flex-direction: column;
-        // align-content: space-between;
-        // justify-content: center;
+
+        @media only screen and (max-width: 600px) {
+            align-content: center;
+        }
+        @media only screen and (max-width: 600px) {
+            justify-self: center;
+
+            &--logo{
+
+                text-align: center;
+            }
+        }
 
         &--social-links{
             & img{
                 padding-inline: 0.2rem;
+                @media only screen and (max-width: 600px) {
+
+                    padding-inline: 0.6rem;
+                }
             }
         }
     }
@@ -32,8 +55,15 @@
             grid-template-rows: 3;
             font-size: 0.8rem;
             row-gap: 0.6rem;
+            @media only screen and (max-width: 600px) {
+                grid-template-columns: 1fr;
+                justify-content: center;
+                margin-block: 1rem;
+
+            }
             & li{
                 color:$color-grey-light-1;
+                justify-self: center;
             }
 
 
@@ -42,10 +72,16 @@
     }
 
     &__buttons-rights{
-    padding-right: 1.5rem;
+      padding-right: 1.5rem;
         justify-self: end;
         align-self: start;
          text-align: end;
+         @media only screen and (max-width: 600px) {
+            justify-self: center;
+            padding-right: 0;
+            text-align: center;
+
+        }
 
     }
 }

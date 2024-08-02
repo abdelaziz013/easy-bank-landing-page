@@ -36,6 +36,11 @@ ol {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .primary-header {
   font-weight: 300;
@@ -63,6 +68,11 @@ header {
   position: relative;
   z-index: 100;
 }
+@media only screen and (max-width: 600px) {
+  header {
+    padding-inline: 1rem;
+  }
+}
 header ul {
   display: flex;
   justify-content: space-around;
@@ -74,6 +84,25 @@ header ul li {
 header ul li:not(:last-child) {
   margin-right: 2rem;
 }
+@media only screen and (max-width: 600px) {
+  header ul {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header button {
+    display: none;
+  }
+}
+header .mobile-menu {
+  cursor: pointer;
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  header .mobile-menu {
+    display: block;
+  }
+}
 
 .footerGrid {
   display: grid;
@@ -84,13 +113,39 @@ header ul li:not(:last-child) {
   background-color: hsl(233, 26%, 24%);
   color: hsl(0, 0%, 100%);
 }
+@media only screen and (max-width: 600px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content 1fr;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+  }
+}
 
 .footer__logo-social {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 600px) {
+  .footer__logo-social {
+    align-content: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footer__logo-social {
+    justify-self: center;
+  }
+  .footer__logo-social--logo {
+    text-align: center;
+  }
+}
 .footer__logo-social--social-links img {
   padding-inline: 0.2rem;
+}
+@media only screen and (max-width: 600px) {
+  .footer__logo-social--social-links img {
+    padding-inline: 0.6rem;
+  }
 }
 .footer__links ul {
   display: grid;
@@ -99,14 +154,29 @@ header ul li:not(:last-child) {
   font-size: 0.8rem;
   row-gap: 0.6rem;
 }
+@media only screen and (max-width: 600px) {
+  .footer__links ul {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-block: 1rem;
+  }
+}
 .footer__links ul li {
   color: hsl(0, 0%, 98%);
+  justify-self: center;
 }
 .footer__buttons-rights {
   padding-right: 1.5rem;
   justify-self: end;
   align-self: start;
   text-align: end;
+}
+@media only screen and (max-width: 600px) {
+  .footer__buttons-rights {
+    justify-self: center;
+    padding-right: 0;
+    text-align: center;
+  }
 }
 
 .btn {
@@ -127,11 +197,23 @@ header ul li:not(:last-child) {
   background-color: hsl(0, 0%, 98%);
   overflow: hidden;
 }
+@media only screen and (max-width: 600px) {
+  .intro {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 0;
+  }
+}
 .intro__description {
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding-right: 20rem;
+  padding-right: 16rem;
+}
+@media only screen and (max-width: 600px) {
+  .intro__description {
+    grid-row: 2/-2;
+  }
 }
 .intro__mockup {
   position: relative;
@@ -154,18 +236,41 @@ header ul li:not(:last-child) {
   padding: 5rem;
   background-color: hsl(0, 0%, 98%);
 }
-.why__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+@media only screen and (max-width: 600px) {
+  .why {
+    padding: 1rem;
+    text-align: center;
+  }
+  .why h1 {
+    padding-inline: 3rem;
+  }
+  .why p {
+    padding-inline: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .why {
+    padding: 1rem;
+  }
 }
 .why__card {
   padding-right: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .why__card {
+    padding-right: 0;
+  }
 }
 
 .article {
   padding: 5rem;
   background-color: hsl(0, 0%, 98%);
+}
+@media only screen and (max-width: 600px) {
+  .article {
+    padding: 1rem;
+    text-align: center;
+  }
 }
 .article__card {
   width: 15rem;
@@ -173,6 +278,12 @@ header ul li:not(:last-child) {
   border-radius: 5px;
   background-color: hsl(0, 0%, 100%);
   overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+  .article__card {
+    justify-self: center;
+    width: 95%;
+  }
 }
 .article__card--img {
   width: 100%;
