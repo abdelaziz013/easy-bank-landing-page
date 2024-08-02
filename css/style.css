@@ -19,13 +19,32 @@ ol {
   padding: 0;
 }
 
+.mb-small-1 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-small {
   margin-bottom: 1.5rem;
+}
+
+.mb-large {
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
 .primary-header {
   font-weight: 300;
   color: hsl(233, 26%, 24%);
+}
+
+.secondary-header {
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .text {
@@ -56,6 +75,40 @@ header ul li:not(:last-child) {
   margin-right: 2rem;
 }
 
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-inline: 5rem;
+  padding-block: 3rem;
+  align-items: center;
+  background-color: hsl(233, 26%, 24%);
+  color: hsl(0, 0%, 100%);
+}
+
+.footer__logo-social {
+  display: flex;
+  flex-direction: column;
+}
+.footer__logo-social--social-links img {
+  padding-inline: 0.2rem;
+}
+.footer__links ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3;
+  font-size: 0.8rem;
+  row-gap: 0.6rem;
+}
+.footer__links ul li {
+  color: hsl(0, 0%, 98%);
+}
+.footer__buttons-rights {
+  padding-right: 1.5rem;
+  justify-self: end;
+  align-self: start;
+  text-align: end;
+}
+
 .btn {
   border: none;
   padding: 0.7rem 1.5rem;
@@ -77,12 +130,11 @@ header ul li:not(:last-child) {
 .intro__description {
   display: flex;
   flex-direction: column;
-  place-content: center;
+  align-self: center;
   padding-right: 20rem;
 }
 .intro__mockup {
   position: relative;
-  z-index: 1000;
 }
 .intro__mockup--background {
   position: absolute;
@@ -101,4 +153,41 @@ header ul li:not(:last-child) {
 .why {
   padding: 5rem;
   background-color: hsl(0, 0%, 98%);
+}
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.why__card {
+  padding-right: 1rem;
+}
+
+.article {
+  padding: 5rem;
+  background-color: hsl(0, 0%, 98%);
+}
+.article__card {
+  width: 15rem;
+  height: 25rem;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+}
+.article__card--img {
+  width: 100%;
+  height: 50%;
+}
+.article__card--img img {
+  width: 100%;
+  height: 100%;
+}
+.article__card--description {
+  text-align: start;
+  padding: 1rem;
+}
+.article__card--author {
+  font-size: 0.8rem;
+  color: hsl(233, 8%, 62%);
+  font-weight: 300;
 }

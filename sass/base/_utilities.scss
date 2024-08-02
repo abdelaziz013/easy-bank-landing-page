@@ -1,3 +1,11 @@
 
 
+.mb-small-1{margin-bottom: 0.5rem}
 .mb-small { margin-bottom: 1.5rem  }
+.mb-large { margin-bottom: 2rem }
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}

@@ -8,12 +8,12 @@
     &__description {
         display: flex;
         flex-direction: column;
-        place-content: center;
+        align-self: center;
         padding-right: 20rem;
     }
     &__mockup {
         position: relative;
-        z-index: 1000;
+
         &--background {
             position: absolute;
             right: -30rem;
@@ -33,5 +33,46 @@
 .why {
     padding: $padding-inline;
     background-color: $color-grey-light-2;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1rem;
+    }
+    &__card{
+        padding-right:1rem;
+
+    }
+
+}
+
+.article{
+    padding: $padding-inline;
+    background-color: $color-grey-light-1;
+    &__card{
+        width:15rem;
+        height:25rem;
+        border-radius: 5px;
+        background-color: $color-white;
+        overflow: hidden;
+
+        &--img{
+            width:100%;
+            height: 50%;
+            & img{
+                width: 100%;
+                height: 100%;
+            };
+        }
+        &--description{
+            text-align: start;
+            padding: 1rem;
+        }
+        &--author{
+            font-size: 0.8rem;
+            color: $color-grey-light-3;
+            font-weight: $fw-regular;
+        }
+
+    }
 
 }

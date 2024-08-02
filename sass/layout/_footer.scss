@@ -1,0 +1,51 @@
+.footerGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    padding-inline: $padding-inline;
+    padding-block: 3rem;
+    align-items: center;
+    background-color: $color-dark-blue;
+    color:$color-white
+}
+
+.footer {
+
+    &__logo-social{
+        display: flex;
+        flex-direction: column;
+        // align-content: space-between;
+        // justify-content: center;
+
+        &--social-links{
+            & img{
+                padding-inline: 0.2rem;
+            }
+        }
+    }
+
+
+    &__links{
+        & ul{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 3;
+            font-size: 0.8rem;
+            row-gap: 0.6rem;
+            & li{
+                color:$color-grey-light-1;
+            }
+
+
+        }
+
+    }
+
+    &__buttons-rights{
+    padding-right: 1.5rem;
+        justify-self: end;
+        align-self: start;
+         text-align: end;
+
+    }
+}
