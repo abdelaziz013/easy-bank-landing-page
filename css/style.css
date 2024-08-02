@@ -213,6 +213,12 @@ header .mobile-menu {
 @media only screen and (max-width: 600px) {
   .intro__description {
     grid-row: 2/-2;
+    padding-right: 0;
+    padding-inline: 2rem;
+    text-align: center;
+  }
+  .intro__description h1 {
+    padding-inline: 3rem;
   }
 }
 .intro__mockup {
@@ -223,10 +229,21 @@ header .mobile-menu {
   right: -30rem;
   top: -17rem;
 }
+@media only screen and (max-width: 600px) {
+  .intro__mockup--background {
+    inset: 0;
+  }
+}
 .intro__mockup--img {
   position: absolute;
   top: -8rem;
   right: -8rem;
+}
+@media only screen and (max-width: 600px) {
+  .intro__mockup--img {
+    right: 0;
+    width: 100%;
+  }
 }
 .intro button {
   width: fit-content;

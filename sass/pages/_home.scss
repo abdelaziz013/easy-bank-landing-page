@@ -18,6 +18,15 @@
 
     @media only screen and (max-width: 600px) {
       grid-row: 2/-2;
+      padding-right: 0;
+      padding-inline: 2rem;
+      // justify-self: center;
+      // align-self: center;
+      text-align: center;
+
+      h1{
+        padding-inline: 3rem;
+      }
     }
   }
   &__mockup {
@@ -27,14 +36,17 @@
       position: absolute;
       right: -30rem;
       top: -17rem;
+      @media only screen and (max-width: 600px) {
+        inset:0;
+      }
     }
     &--img {
       position: absolute;
       top: -8rem;
       right: -8rem;
       @media only screen and (max-width: 600px) {
-    //    right: 0;
-    // width:100%
+       right: 0;
+    width:100%
       }
     }
   }
