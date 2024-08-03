@@ -9,6 +9,7 @@
   <title>Easybank landing page</title>
 </head>
 <body>
+
   <header>
     <div class="logo">
       <img src="assets/images/logo.svg" alt="">
@@ -22,10 +23,26 @@
     </ul>
     <button class="btn">Request Invite</button>
     <!-- mobile menu button -->
-     <div class="mobile-menu">
+     <div class="mobile-menu__button" id="hamburger">
       <img src="assets/images/icon-hamburger.svg" alt="">
+
      </div>
+      <div class="mobile-menu__button hidden" id="close">
+
+      <img src="assets/images/icon-close.svg" alt="">
+     </div>
+     <div class="mobile-menu hidden">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Blog</li>
+        <li>Careers</li>
+      </ul>
+     </div>
+
   </header>
+
   <main>
     <!-- intro -->
     <section class="intro">
@@ -174,5 +191,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+  <script src="./index.js"></script>
 </body>
 </html>
