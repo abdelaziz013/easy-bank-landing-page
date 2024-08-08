@@ -60,7 +60,7 @@ ol {
 
 header {
   padding-inline: 5rem;
-  margin-block: 1rem;
+  margin-block: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +70,7 @@ header {
 }
 @media only screen and (max-width: 600px) {
   header {
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
   }
 }
 header ul {
@@ -103,7 +103,7 @@ header .mobile-menu {
   padding: 0;
   opacity: 1;
   border-radius: 5px;
-  animation: appear 3s ease-all;
+  animation: appear 3s ease-in-out;
 }
 header .mobile-menu ul {
   display: flex;
@@ -127,8 +127,19 @@ header .mobile-menu__button {
 header .hidden {
   display: none;
   opacity: 0;
+  animation: vanish 3s ease-in-out;
 }
 
+@keyframes vanish {
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+  }
+}
 @keyframes appear {
   from {
     display: none;
@@ -152,7 +163,7 @@ header .hidden {
   .footerGrid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr max-content 1fr;
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
     padding-block: 1rem;
   }
 }
@@ -216,7 +227,7 @@ header .hidden {
 
 .btn {
   border: none;
-  padding: 0.7rem 1.5rem;
+  padding: 1rem 1.875rem;
   border-radius: 20px;
   color: hsl(0, 0%, 100%);
   font-weight: 400;
@@ -226,7 +237,7 @@ header .hidden {
 
 .intro {
   display: grid;
-  height: 100vh;
+  height: 665px;
   grid-template-columns: 1fr 1fr;
   padding-left: 5rem;
   background-color: hsl(0, 0%, 98%);
@@ -290,7 +301,7 @@ header .hidden {
 }
 @media only screen and (max-width: 600px) {
   .why {
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
   }
   .why h1 {
@@ -302,7 +313,7 @@ header .hidden {
 }
 @media only screen and (max-width: 600px) {
   .why {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 }
 .why__card {
@@ -320,7 +331,7 @@ header .hidden {
 }
 @media only screen and (max-width: 600px) {
   .article {
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
   }
 }
