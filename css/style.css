@@ -309,7 +309,7 @@ p {
 }
 @media (min-width: 64em) {
   .hero__image {
-    height: 40rem;
+    min-height: 32rem;
     flex: 3;
     background-image: url("../assets/images/bg-intro-desktop.svg");
     background-size: 120%;
@@ -328,9 +328,10 @@ p {
 }
 @media (min-width: 64em) {
   .hero__image::after {
-    background-image: none;
     background-size: 85%;
+    height: 125%;
     background-position: 200px -120px;
+    z-index: 1;
   }
 }
 .hero__text {
@@ -339,7 +340,6 @@ p {
 }
 @media (min-width: 64em) {
   .hero__text {
-    height: 30rem;
     flex: 1.5;
     text-align: start;
     padding-left: 5rem;
@@ -357,15 +357,6 @@ p {
   padding: 5rem;
   background-color: hsl(220, 16%, 96%);
   position: relative;
-}
-.why div {
-  margin-top: 30px;
-}
-@media (min-width: 64em) {
-  .why {
-    margin-top: -100px;
-    z-index: -1;
-  }
 }
 @media only screen and (max-width: 600px) {
   .why {
