@@ -1,15 +1,15 @@
-const menuButton = document.getElementById('hamburger');
+const menuButton = document.getElementById('btnHamburger');
 const closeButton = document.getElementById('close');
+const header = document.querySelector('.header');
 
-const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenu = document.querySelector('.header__menu');
 menuButton.addEventListener('click', () => {
-  menuButton.classList.add('hidden');
-  mobileMenu.classList.remove('hidden');
-  closeButton.classList.remove('hidden');
-});
-
-closeButton.addEventListener('click', () => {
-  menuButton.classList.remove('hidden');
-  mobileMenu.classList.add('hidden');
-  closeButton.classList.add('hidden');
+  menuButton.classList.toggle('open');
+  menuButton.classList.contains('open')
+    ? (mobileMenu.classList.remove('has-fade'),
+     mobileMenu.classList.add('fade-in'),
+     mobileMenu.classList.remove('fade-out'))
+    : (mobileMenu.classList.add('has-fade'),
+    mobileMenu.classList.remove('fade-in'),
+    mobileMenu.classList.add('fade-out'));
 });

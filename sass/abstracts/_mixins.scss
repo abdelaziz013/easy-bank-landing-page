@@ -1,0 +1,33 @@
+// Breakpoints
+@media (min-width: 64em){
+  // styles go here
+}
+
+/*
+0-600px: phone;
+
+600-900px: tablet-potarit
+
+900-1200: tablet-landscape
+
+1200-1800 is where our normal style apply
+
+1800px+:big desktop
+*/
+
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+$breakpoints-down: ("phone": "37.5em", "tap-port": "56.25em", "tap-land": "75em","big-desktop":"112.5em");
+@mixin breakpoint-up($size){
+  @media (min-width: map-get($breakpoints-up, $size)){
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size){
+  @media (max-width: map-get($breakpoints-down, $size)){
+    @content;
+  }
+}
