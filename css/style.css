@@ -328,6 +328,7 @@ p {
 }
 @media (min-width: 64em) {
   .hero__image::after {
+    background-image: none;
     background-size: 85%;
     background-position: 200px -120px;
   }
@@ -354,7 +355,7 @@ p {
 
 .why {
   padding: 5rem;
-  background-color: hsl(0, 0%, 98%);
+  background-color: hsl(220, 16%, 96%);
   position: relative;
 }
 .why div {
