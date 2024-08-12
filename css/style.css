@@ -70,6 +70,22 @@ ol {
   padding: 0;
 }
 
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+}
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+}
+
 .primary-header {
   font-weight: 300;
   color: hsl(233, 26%, 24%);
@@ -264,77 +280,91 @@ ol {
 
 .btn {
   border: none;
-  padding: 1rem 1.875rem;
-  border-radius: 20px;
+  padding: 0.875rem 2.1875rem;
+  border-radius: 50px;
   color: hsl(0, 0%, 100%);
   font-weight: 400;
   background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   cursor: pointer;
 }
 
-.intro {
-  display: grid;
-  height: 665px;
-  grid-template-columns: 1fr 1fr;
-  padding-left: 5rem;
-  background-color: hsl(0, 0%, 98%);
-  overflow: hidden;
-}
-@media only screen and (max-width: 600px) {
-  .intro {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding-left: 0;
-  }
-}
-.intro__description {
+.hero__container {
   display: flex;
   flex-direction: column;
-  align-self: center;
-  padding-right: 16rem;
+  background-color: hsl(0, 0%, 98%);
 }
-@media only screen and (max-width: 600px) {
-  .intro__description {
-    grid-row: 2/-2;
-    padding-right: 0;
-    padding-inline: 2rem;
-    text-align: center;
-  }
-  .intro__description h1 {
-    padding-inline: 3rem;
+@media (min-width: 64em) {
+  .hero__container {
+    flex-direction: row-reverse;
+    position: relative;
+    align-items: center;
   }
 }
-.intro__mockup {
+.hero__image {
+  min-height: 19.5rem;
+  background-image: url("../assets/images/bg-intro-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
-.intro__mockup--background {
-  position: absolute;
-  right: -30rem;
-  top: -17rem;
-}
-@media only screen and (max-width: 600px) {
-  .intro__mockup--background {
-    inset: 0;
+@media (min-width: 64em) {
+  .hero__image {
+    height: 40rem;
+    flex: 3;
+    background-image: url("../assets/images/bg-intro-desktop.svg");
+    background-size: 120%;
+    background-position: 15px -180px;
   }
 }
-.intro__mockup--img {
+.hero__image::after {
+  content: "";
+  background-size: cover;
   position: absolute;
-  top: -8rem;
-  right: -8rem;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/image-mockups.png");
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
 }
-@media only screen and (max-width: 600px) {
-  .intro__mockup--img {
-    right: 0;
-    width: 100%;
+@media (min-width: 64em) {
+  .hero__image::after {
+    background-size: 85%;
+    background-position: 200px -120px;
   }
 }
-.intro button {
-  width: fit-content;
+.hero__text {
+  padding: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .hero__text {
+    height: 30rem;
+    flex: 1.5;
+    text-align: start;
+    padding-left: 5rem;
+    line-height: 1.5;
+  }
+  .hero__text h1 {
+    padding-right: 9rem;
+  }
+  .hero__text p {
+    padding-right: 3rem;
+  }
 }
 
 .why {
   padding: 5rem;
   background-color: hsl(0, 0%, 98%);
+  position: relative;
+}
+.why div {
+  margin-top: 30px;
+}
+@media (min-width: 64em) {
+  .why {
+    margin-top: -100px;
+    z-index: -1;
+  }
 }
 @media only screen and (max-width: 600px) {
   .why {
@@ -365,6 +395,7 @@ ol {
 .article {
   padding: 5rem;
   background-color: hsl(0, 0%, 98%);
+  z-index: -1;
 }
 @media only screen and (max-width: 600px) {
   .article {
@@ -401,6 +432,59 @@ ol {
   font-size: 0.8rem;
   color: hsl(233, 8%, 62%);
   font-weight: 300;
+}
+
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+.container--pall {
+  padding-top: 4.375rem;
+  padding-right: 1.5rem;
+  padding-bottom: 4.375rem;
+  padding-left: 1.5rem;
+}
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--py {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--pt {
+  padding-top: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
+}
+.container--pr {
+  padding-right: 1.5rem;
+}
+.container--pb {
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
+}
+.container--pl {
+  padding-left: 1.5rem;
 }
 
 .mb-small-1 {
